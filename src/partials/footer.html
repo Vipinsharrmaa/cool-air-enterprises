@@ -1,0 +1,65 @@
+<!--
+  Shared site footer. Included once via the "@include: footer" marker near
+  the end of the body on every page.
+
+  No page-links column here on purpose: the header carries no visible menu
+  either (the site is a single "Enquire Now" landing model), so a footer
+  nav list would just repeat links nothing else on the site points to. The
+  services list stays because it names offerings, not pages, and the
+  contact column is intentionally just the two phone numbers - no email or
+  address - per the current content brief.
+
+  Numbers below are written as plain text (not pulled from config.js) on
+  purpose: this is the human-readable, always-crawlable version search
+  engines and no-JS visitors see. If a phone/WhatsApp number changes, update
+  it here AND in src/js/config.js (which drives the floating WhatsApp/Call
+  buttons and the contact form) - both places are short and easy to find.
+
+  Call and WhatsApp both use the same number (+91 97179 46234) on purpose -
+  the "Call:"/"WhatsApp:" prefixes below exist so the two lines read as two
+  different actions rather than an accidental duplicate.
+-->
+<footer class="bg-navy text-white">
+  <div class="mx-auto max-w-content px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
+    <div class="grid grid-cols-1 gap-12 lg:grid-cols-[1.3fr_1fr_1fr]">
+
+      <!-- Brand + short line -->
+      <div>
+        <a href="index.html" class="flex items-center gap-3" aria-label="Cool Air Enterprises - home">
+          <img src="assets/images/logo/cae-mark-white.png" alt="" class="h-9 w-auto" width="120" height="96" />
+          <span class="font-display text-lg font-bold uppercase tracking-wide">Cool Air Enterprises</span>
+        </a>
+        <p class="mt-4 max-w-xs text-sm leading-relaxed text-white/70">
+          Commercial and industrial HVAC installation, erection, maintenance and allied
+          works, serving projects across India.
+        </p>
+      </div>
+
+      <!-- Major service links -->
+      <div>
+        <h2 class="font-display text-sm font-semibold uppercase tracking-[0.15em] text-white/50">Services</h2>
+        <ul class="mt-4 space-y-3 text-sm text-white/80">
+          <li><a href="hvac-solutions.html" class="transition-colors hover:text-white">HVAC Installation &amp; AMC</a></li>
+          <li><a href="ventilation.html" class="transition-colors hover:text-white">Ventilation</a></li>
+          <li><a href="ducting.html" class="transition-colors hover:text-white">Ducting</a></li>
+          <li><a href="cold-storage.html" class="transition-colors hover:text-white">Cold Storage</a></li>
+          <li><a href="electrical.html" class="transition-colors hover:text-white">Electrical</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact number(s) only -->
+      <div>
+        <h2 class="font-display text-sm font-semibold uppercase tracking-[0.15em] text-white/50">Contact Number</h2>
+        <ul class="mt-4 space-y-3 text-sm text-white/80">
+          <li><span class="text-white/50">Call:</span> <a href="tel:+919717946234" class="transition-colors hover:text-white">+91 97179 46234</a></li>
+          <li><span class="text-white/50">WhatsApp:</span> <a href="https://wa.me/919717946234" class="transition-colors hover:text-white">+91 97179 46234</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="mt-12 flex flex-col gap-2 border-t border-white/10 pt-6 text-xs text-white/50 sm:flex-row sm:items-center sm:justify-between">
+      <p>&copy; <span data-current-year>2026</span> Cool Air Enterprises. All rights reserved.</p>
+      <p>Website Designed &amp; Developed by <a href="https://incrediblereach.com/" target="_blank" rel="noopener" class="underline underline-offset-2 transition-colors hover:text-white">Incredible Reach</a></p>
+    </div>
+  </div>
+</footer>

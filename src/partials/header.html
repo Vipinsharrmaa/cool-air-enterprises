@@ -1,0 +1,38 @@
+<!--
+  Shared site header: skip link + sticky top bar (logo, "Enquire Now" CTA).
+
+  This file is identical on every page - included once via the
+  "@include: header" marker at the top of the body.
+
+  By design the header carries no visible page menu (Home/About/HVAC
+  Solutions/etc.) and no hamburger - the site works as a landing page where
+  "Enquire Now" is the one action offered everywhere. The individual pages
+  still exist and are linked from within page content (service cards,
+  footer services list, cross-links between service pages), just not from
+  this header.
+-->
+
+<a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[100] focus:rounded-md focus:bg-primary focus:px-4 focus:py-2 focus:text-white">
+  Skip to main content
+</a>
+
+<header class="sticky top-0 z-50 border-b border-line bg-white/95 backdrop-blur">
+  <div class="mx-auto flex h-16 max-w-content items-center justify-between px-4 sm:px-6 lg:h-20 lg:px-8">
+
+    <!-- Logo: mark image + wordmark text (text stays real, editable HTML) -->
+    <a href="index.html" class="flex items-center gap-2 lg:gap-3" aria-label="Cool Air Enterprises - home">
+      <img
+        src="assets/images/logo/cae-mark.png"
+        alt=""
+        class="h-8 w-auto lg:h-10"
+        width="120" height="96"
+      />
+      <span class="hidden font-display text-base font-bold uppercase leading-none tracking-wide text-ink sm:block lg:text-lg">
+        Cool Air<br class="hidden lg:block" /> Enterprises
+      </span>
+    </a>
+
+    <!-- Single site-wide CTA - the only nav action, on every screen size -->
+    <a href="contact.html#contact-form" class="btn-primary">Enquire Now</a>
+  </div>
+</header>

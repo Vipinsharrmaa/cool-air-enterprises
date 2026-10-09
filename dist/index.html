@@ -1,0 +1,546 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Commercial &amp; Industrial HVAC Solutions in India | Cool Air Enterprises</title>
+  <meta name="description" content="Cool Air Enterprises delivers installation, erection, maintenance (AMC) of central A/C, refrigeration plants, air washer, cold storage and electrical jobs across India." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.coolairenterprises.in/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Commercial & Industrial HVAC Solutions in India | Cool Air Enterprises" />
+  <meta property="og:description" content="Installation, erection, maintenance (AMC) of central A/C, refrigeration plants, air washer, cold storage and electrical jobs." />
+  <meta property="og:url" content="https://www.coolairenterprises.in/" />
+  <meta property="og:image" content="assets/images/ducting/ducting-hero-800.jpg" />
+
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HVACBusiness",
+    "name": "Cool Air Enterprises",
+    "image": "assets/images/logo/cae-logo-full.png",
+    "telephone": "+91-97179-46234",
+    "email": "info.coolairenterprises@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "A-708, Sector 2, Rohini",
+      "addressLocality": "Delhi",
+      "postalCode": "110085",
+      "addressCountry": "IN"
+    },
+    "areaServed": "IN",
+    "url": "https://www.coolairenterprises.in/"
+  }
+  </script>
+</head>
+<body class="pb-16 sm:pb-0">
+
+<!--
+  Shared site header: skip link + sticky top bar (logo, "Enquire Now" CTA).
+
+  This file is identical on every page - included once via the
+  "@include: header" marker at the top of the body.
+
+  By design the header carries no visible page menu (Home/About/HVAC
+  Solutions/etc.) and no hamburger - the site works as a landing page where
+  "Enquire Now" is the one action offered everywhere. The individual pages
+  still exist and are linked from within page content (service cards,
+  footer services list, cross-links between service pages), just not from
+  this header.
+-->
+
+<a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[100] focus:rounded-md focus:bg-primary focus:px-4 focus:py-2 focus:text-white">
+  Skip to main content
+</a>
+
+<header class="sticky top-0 z-50 border-b border-line bg-white/95 backdrop-blur">
+  <div class="mx-auto flex h-16 max-w-content items-center justify-between px-4 sm:px-6 lg:h-20 lg:px-8">
+
+    <!-- Logo: mark image + wordmark text (text stays real, editable HTML) -->
+    <a href="index.html" class="flex items-center gap-2 lg:gap-3" aria-label="Cool Air Enterprises - home">
+      <img
+        src="assets/images/logo/cae-mark.png"
+        alt=""
+        class="h-8 w-auto lg:h-10"
+        width="120" height="96"
+      />
+      <span class="hidden font-display text-base font-bold uppercase leading-none tracking-wide text-ink sm:block lg:text-lg">
+        Cool Air<br class="hidden lg:block" /> Enterprises
+      </span>
+    </a>
+
+    <!-- Single site-wide CTA - the only nav action, on every screen size -->
+    <a href="contact.html#contact-form" class="btn-primary">Enquire Now</a>
+  </div>
+</header>
+
+<!--
+  Home-page-only opening reveal. Included via the "@include: intro-animation"
+  marker right after the body opens, on index.html only.
+
+  How it stays safe (never blocks access to the site):
+  - Plain CSS animation (see .intro-overlay / @keyframes intro-fade in
+    input.css) fades this overlay out after ~1.5s on its own, with NO
+    dependency on JavaScript.
+  - pointer-events is "none" for its entire lifetime, so it never intercepts
+    clicks/taps/scroll even while visible.
+  - `prefers-reduced-motion` hides it immediately via a media query.
+  - If JavaScript loads, src/js/animations.js additionally animates the mark
+    and line for a more polished reveal - but that's a progressive
+    enhancement on top of the CSS behaviour above, not a requirement for it.
+  - It plays on every load/reload of the home page (per the site's design
+    brief), since it's short and non-blocking rather than a fake loading screen.
+-->
+<div class="intro-overlay bg-navy" aria-hidden="true" data-intro-overlay>
+  <div class="flex flex-col items-center gap-4">
+    <img
+      src="assets/images/logo/cae-mark-white.png"
+      alt=""
+      class="h-16 w-auto opacity-0 sm:h-20"
+      data-intro-mark
+      width="120" height="96"
+    />
+    <span
+      class="h-px w-0 bg-white/40"
+      data-intro-line
+      style="max-width: 220px;"
+    ></span>
+  </div>
+</div>
+
+
+<main id="main-content">
+
+  <!-- ================= HERO ================= -->
+  <section class="relative flex min-h-[92vh] items-end overflow-hidden bg-navy sm:min-h-[85vh]">
+    <picture>
+      <source type="image/webp" srcset="assets/images/ducting/ducting-hero-480.webp 480w, assets/images/ducting/ducting-hero-800.webp 800w" sizes="100vw" />
+      <img
+        src="assets/images/ducting/ducting-hero-800.jpg"
+        srcset="assets/images/ducting/ducting-hero-480.jpg 480w, assets/images/ducting/ducting-hero-800.jpg 800w"
+        sizes="100vw"
+        alt="Insulated HVAC ductwork suspended from an industrial ceiling"
+        class="hero-zoom absolute inset-0 h-full w-full object-cover"
+        width="800" height="449"
+        fetchpriority="high"
+      />
+    </picture>
+    <div class="absolute inset-0 bg-gradient-to-t from-navy via-navy/80 to-navy/40"></div>
+    <div class="line-pattern absolute inset-0"></div>
+
+    <div class="relative mx-auto w-full max-w-content px-4 pb-14 pt-32 sm:px-6 sm:pb-20 lg:px-8">
+      <p data-hero-reveal class="eyebrow text-white/80">Cool Air Enterprises</p>
+      <h1 data-hero-reveal class="mt-4 max-w-3xl font-display text-4xl font-bold leading-[1.05] text-white sm:text-6xl lg:text-7xl">
+        Installation, Erection, Maintenance (AMC) of Central A/C, Refrigeration Plants, Air Washer, Cold Storage And Electrical Jobs.
+      </h1>
+      <p data-hero-reveal class="mt-6 max-w-2xl font-sans text-base leading-relaxed text-white/85 sm:text-lg">
+        Commercial and industrial HVAC solutions delivered end to end, for projects across India.
+      </p>
+
+      <div data-hero-reveal class="mt-8 flex flex-col gap-3 sm:flex-row">
+        <a href="contact.html#contact-form" class="btn-primary">Enquire Now</a>
+        <a href="hvac-solutions.html" class="btn-on-dark">Explore Our Services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CREDIBILITY STRIP ================= -->
+  <section class="border-b border-line bg-surface-alt" data-reveal-group>
+    <div class="mx-auto grid max-w-content grid-cols-1 gap-8 px-4 py-12 sm:px-6 sm:grid-cols-3 lg:px-8">
+      <div data-reveal class="text-center">
+        <p class="font-display text-4xl font-bold text-primary"><span data-counter data-counter-to="30" data-counter-suffix="+">0</span></p>
+        <p class="mt-1 font-sans text-xs font-semibold uppercase tracking-wide text-ink-muted">Years Industry Expertise</p>
+      </div>
+      <div data-reveal class="text-center">
+        <p class="font-display text-4xl font-bold text-primary">Pan-India</p>
+        <p class="mt-1 font-sans text-xs font-semibold uppercase tracking-wide text-ink-muted">Service Capability</p>
+      </div>
+      <div data-reveal class="text-center">
+        <p class="font-display text-4xl font-bold text-primary">End-to-End</p>
+        <p class="mt-1 font-sans text-xs font-semibold uppercase tracking-wide text-ink-muted">HVAC Solutions</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOUNDER ================= -->
+  <section class="mx-auto max-w-content px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
+    <div class="grid grid-cols-1 gap-12 lg:grid-cols-[auto_1fr] lg:items-center lg:gap-16">
+      <div data-reveal class="mx-auto w-48 shrink-0 overflow-hidden rounded-lg border border-line shadow-card sm:w-56 lg:mx-0">
+        <picture>
+          <source type="image/webp" srcset="assets/images/founder/satish-kumar-480.webp 480w, assets/images/founder/satish-kumar-800.webp 800w" sizes="224px" />
+          <img
+            src="assets/images/founder/satish-kumar-480.jpg"
+            srcset="assets/images/founder/satish-kumar-480.jpg 480w, assets/images/founder/satish-kumar-800.jpg 800w"
+            sizes="224px"
+            alt="Mr Satish Kumar, Founder of Cool Air Enterprises"
+            loading="lazy"
+            width="480" height="628"
+            class="h-full w-full object-cover"
+          />
+        </picture>
+      </div>
+      <div data-reveal>
+        <p class="eyebrow">Founder</p>
+        <h2 class="section-title mt-3">Mr Satish Kumar &mdash; 30+ Years of HVAC Expertise</h2>
+        <p class="mt-5 max-w-2xl font-sans text-base leading-relaxed text-ink-muted">
+          Cool Air Enterprises is led by Mr Satish Kumar, bringing more than 30 years of
+          HVAC industry expertise into a focused commercial and industrial service
+          organisation. We handle technical execution end to end &mdash; installation,
+          erection, maintenance and the ventilation, ducting and electrical works that go
+          alongside a modern HVAC system.
+        </p>
+        <p class="mt-4 max-w-2xl font-sans text-base leading-relaxed text-ink-muted">
+          Our team works on projects across India for commercial and industrial clients,
+          from initial installation through to ongoing AMC support.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CORE SERVICE CARDS ================= -->
+  <section class="bg-surface-alt py-20 lg:py-28">
+    <div class="mx-auto max-w-content px-4 sm:px-6 lg:px-8">
+      <p class="eyebrow">What We Do</p>
+      <h2 class="section-title mt-3 max-w-xl">Core Service Areas</h2>
+
+      <div class="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-5" data-reveal-group>
+        <a href="hvac-solutions.html" data-reveal class="card-lift group flex flex-col overflow-hidden rounded-lg border border-line bg-white shadow-card">
+          <img src="assets/images/hvac/chillers-480.jpg" alt="Chiller plant equipment" loading="lazy" width="480" height="320" class="aspect-[3/2] w-full object-cover" />
+          <div class="flex flex-1 flex-col p-6">
+            <h3 class="font-display text-xl font-bold text-ink">HVAC Solutions</h3>
+            <p class="mt-2 flex-1 font-sans text-sm leading-relaxed text-ink-muted">Installation, erection, repair, service and AMC for commercial &amp; industrial systems.</p>
+            <span class="mt-4 font-sans text-sm font-semibold text-primary">Read More &rarr;</span>
+          </div>
+        </a>
+        <a href="ventilation.html" data-reveal class="card-lift group flex flex-col overflow-hidden rounded-lg border border-line bg-white shadow-card">
+          <img src="assets/images/ventilation/air-washer-480.jpg" alt="Air washer ventilation unit" loading="lazy" width="480" height="320" class="aspect-[3/2] w-full object-cover" />
+          <div class="flex flex-1 flex-col p-6">
+            <h3 class="font-display text-xl font-bold text-ink">Ventilation Systems</h3>
+            <p class="mt-2 flex-1 font-sans text-sm leading-relaxed text-ink-muted">Air washers, air scrubbers and exhaust fans for commercial &amp; industrial airflow.</p>
+            <span class="mt-4 font-sans text-sm font-semibold text-primary">Read More &rarr;</span>
+          </div>
+        </a>
+        <a href="ducting.html" data-reveal class="card-lift group flex flex-col overflow-hidden rounded-lg border border-line bg-white shadow-card">
+          <img src="assets/images/ducting/ducting-2-480.jpg" alt="Commercial ducting installation" loading="lazy" width="480" height="320" class="aspect-[3/2] w-full object-cover" />
+          <div class="flex flex-1 flex-col p-6">
+            <h3 class="font-display text-xl font-bold text-ink">Ducting Work</h3>
+            <p class="mt-2 flex-1 font-sans text-sm leading-relaxed text-ink-muted">Fabrication and installation of HVAC &amp; ventilation ducting for air distribution.</p>
+            <span class="mt-4 font-sans text-sm font-semibold text-primary">Read More &rarr;</span>
+          </div>
+        </a>
+        <a href="cold-storage.html" data-reveal class="card-lift group flex flex-col overflow-hidden rounded-lg border border-line bg-white shadow-card">
+          <img src="assets/images/cold-storage/cold-storage-480.jpg" alt="Cold storage installation" loading="lazy" width="480" height="320" class="aspect-[3/2] w-full object-cover" />
+          <div class="flex flex-1 flex-col p-6">
+            <h3 class="font-display text-xl font-bold text-ink">Cold Storage</h3>
+            <p class="mt-2 flex-1 font-sans text-sm leading-relaxed text-ink-muted">Installation, maintenance and repair for temperature-controlled cold rooms.</p>
+            <span class="mt-4 font-sans text-sm font-semibold text-primary">Read More &rarr;</span>
+          </div>
+        </a>
+        <a href="electrical.html" data-reveal class="card-lift group flex flex-col overflow-hidden rounded-lg border border-line bg-white shadow-card">
+          <img src="assets/images/electrical/electrical-panel-480.jpg" alt="HVAC electrical panel" loading="lazy" width="480" height="320" class="aspect-[3/2] w-full bg-white object-contain" />
+          <div class="flex flex-1 flex-col p-6">
+            <h3 class="font-display text-xl font-bold text-ink">HVAC Electrical Works</h3>
+            <p class="mt-2 flex-1 font-sans text-sm leading-relaxed text-ink-muted">Electrical panels and wiring integration that support HVAC installations.</p>
+            <span class="mt-4 font-sans text-sm font-semibold text-primary">Read More &rarr;</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= GLIMPSE OF OUR FIELD WORK ================= -->
+  <section class="py-20 lg:py-28">
+    <div class="mx-auto max-w-content px-4 sm:px-6 lg:px-8">
+      <p class="eyebrow">Our Work</p>
+      <h2 class="section-title mt-3 max-w-xl">Glimpse of Our Field Work</h2>
+    </div>
+
+    <!-- Horizontal scroll strip: auto-advances slowly on its own (see
+         setupFieldWorkAutoScroll() in src/js/main.js), and bounces back and
+         forth between the two ends instead of jumping - no image list needs
+         duplicating for a seamless loop. Still a plain native overflow-x
+         scroller underneath, so dragging/swiping/trackpad-scrolling it always
+         overrides the autoplay immediately, no lightbox or filter needed. -->
+    <div class="mt-10 flex gap-4 overflow-x-auto [scroll-behavior:auto] px-4 pb-4 sm:px-6 lg:px-8" data-reveal data-auto-scroll>
+      <img src="assets/images/our-work/field-work-01.jpg" srcset="assets/images/our-work/field-work-01.webp" alt="Cool Air Enterprises field work - on-site installation" loading="lazy" width="320" height="240" class="h-56 w-72 shrink-0 rounded-lg object-cover sm:h-64 sm:w-80" />
+      <img src="assets/images/our-work/field-work-02.jpg" alt="Cool Air Enterprises field work - on-site installation" loading="lazy" width="320" height="240" class="h-56 w-72 shrink-0 rounded-lg object-cover sm:h-64 sm:w-80" />
+      <img src="assets/images/our-work/field-work-03.jpg" alt="Cool Air Enterprises field work - on-site installation" loading="lazy" width="320" height="240" class="h-56 w-72 shrink-0 rounded-lg object-cover sm:h-64 sm:w-80" />
+      <img src="assets/images/our-work/field-work-04.jpg" alt="Cool Air Enterprises field work - on-site installation" loading="lazy" width="320" height="240" class="h-56 w-72 shrink-0 rounded-lg object-cover sm:h-64 sm:w-80" />
+      <img src="assets/images/our-work/field-work-05.jpg" alt="Cool Air Enterprises field work - on-site installation" loading="lazy" width="320" height="240" class="h-56 w-72 shrink-0 rounded-lg object-cover sm:h-64 sm:w-80" />
+      <img src="assets/images/our-work/field-work-06.jpg" alt="Cool Air Enterprises field work - on-site installation" loading="lazy" width="320" height="240" class="h-56 w-72 shrink-0 rounded-lg object-cover sm:h-64 sm:w-80" />
+      <img src="assets/images/our-work/field-work-07.jpg" alt="Cool Air Enterprises field work - on-site installation" loading="lazy" width="320" height="240" class="h-56 w-72 shrink-0 rounded-lg object-cover sm:h-64 sm:w-80" />
+      <img src="assets/images/our-work/field-work-08.jpg" alt="Cool Air Enterprises field work - on-site installation" loading="lazy" width="320" height="240" class="h-56 w-72 shrink-0 rounded-lg object-cover sm:h-64 sm:w-80" />
+      <img src="assets/images/our-work/field-work-09.jpg" alt="Cool Air Enterprises field work - on-site installation" loading="lazy" width="320" height="240" class="h-56 w-72 shrink-0 rounded-lg object-cover sm:h-64 sm:w-80" />
+      <img src="assets/images/our-work/field-work-10.jpg" alt="Cool Air Enterprises field work - on-site installation" loading="lazy" width="320" height="240" class="h-56 w-72 shrink-0 rounded-lg object-cover sm:h-64 sm:w-80" />
+      <img src="assets/images/our-work/field-work-11.jpg" alt="Cool Air Enterprises field work - on-site installation" loading="lazy" width="320" height="240" class="h-56 w-72 shrink-0 rounded-lg object-cover sm:h-64 sm:w-80" />
+      <img src="assets/images/our-work/field-work-12.jpg" alt="Cool Air Enterprises field work - on-site installation" loading="lazy" width="320" height="240" class="h-56 w-72 shrink-0 rounded-lg object-cover sm:h-64 sm:w-80" />
+      <img src="assets/images/our-work/field-work-13.jpg" alt="Cool Air Enterprises field work - on-site installation" loading="lazy" width="320" height="240" class="h-56 w-72 shrink-0 rounded-lg object-cover sm:h-64 sm:w-80" />
+      <img src="assets/images/our-work/field-work-14.jpg" alt="Cool Air Enterprises field work - on-site installation" loading="lazy" width="320" height="240" class="h-56 w-72 shrink-0 rounded-lg object-cover sm:h-64 sm:w-80" />
+      <img src="assets/images/our-work/field-work-15.jpg" alt="Cool Air Enterprises field work - on-site installation" loading="lazy" width="320" height="240" class="h-56 w-72 shrink-0 rounded-lg object-cover sm:h-64 sm:w-80" />
+      <img src="assets/images/our-work/field-work-16.jpg" alt="Cool Air Enterprises field work - on-site installation" loading="lazy" width="320" height="240" class="h-56 w-72 shrink-0 rounded-lg object-cover sm:h-64 sm:w-80" />
+      <img src="assets/images/our-work/field-work-17.jpg" alt="Cool Air Enterprises field work - on-site installation" loading="lazy" width="320" height="240" class="h-56 w-72 shrink-0 rounded-lg object-cover sm:h-64 sm:w-80" />
+      <img src="assets/images/our-work/field-work-18.jpg" alt="Cool Air Enterprises field work - on-site installation" loading="lazy" width="320" height="240" class="h-56 w-72 shrink-0 rounded-lg object-cover sm:h-64 sm:w-80" />
+      <img src="assets/images/our-work/field-work-19.jpg" alt="Cool Air Enterprises field work - on-site installation" loading="lazy" width="320" height="240" class="h-56 w-72 shrink-0 rounded-lg object-cover sm:h-64 sm:w-80" />
+      <img src="assets/images/our-work/field-work-20.jpg" alt="Cool Air Enterprises field work - on-site installation" loading="lazy" width="320" height="240" class="h-56 w-72 shrink-0 rounded-lg object-cover sm:h-64 sm:w-80" />
+      <img src="assets/images/our-work/field-work-21.jpg" alt="Cool Air Enterprises field work - on-site installation" loading="lazy" width="320" height="240" class="h-56 w-72 shrink-0 rounded-lg object-cover sm:h-64 sm:w-80" />
+      <img src="assets/images/our-work/field-work-22.jpg" alt="Cool Air Enterprises field work - on-site installation" loading="lazy" width="320" height="240" class="h-56 w-72 shrink-0 rounded-lg object-cover sm:h-64 sm:w-80" />
+      <img src="assets/images/our-work/field-work-23.jpg" alt="Cool Air Enterprises field work - on-site installation" loading="lazy" width="320" height="240" class="h-56 w-72 shrink-0 rounded-lg object-cover sm:h-64 sm:w-80" />
+      <img src="assets/images/our-work/field-work-24.jpg" alt="Cool Air Enterprises field work - on-site installation" loading="lazy" width="320" height="240" class="h-56 w-72 shrink-0 rounded-lg object-cover sm:h-64 sm:w-80" />
+      <img src="assets/images/our-work/field-work-25.jpg" alt="Cool Air Enterprises field work - on-site installation" loading="lazy" width="320" height="240" class="h-56 w-72 shrink-0 rounded-lg object-cover sm:h-64 sm:w-80" />
+      <img src="assets/images/our-work/field-work-26.jpg" alt="Cool Air Enterprises field work - on-site installation" loading="lazy" width="320" height="240" class="h-56 w-72 shrink-0 rounded-lg object-cover sm:h-64 sm:w-80" />
+      <img src="assets/images/our-work/field-work-27.jpg" alt="Cool Air Enterprises field work - on-site installation" loading="lazy" width="320" height="240" class="h-56 w-72 shrink-0 rounded-lg object-cover sm:h-64 sm:w-80" />
+      <img src="assets/images/our-work/field-work-28.jpg" alt="Cool Air Enterprises field work - on-site installation" loading="lazy" width="320" height="240" class="h-56 w-72 shrink-0 rounded-lg object-cover sm:h-64 sm:w-80" />
+      <img src="assets/images/our-work/field-work-29.jpg" alt="Cool Air Enterprises field work - on-site installation" loading="lazy" width="320" height="240" class="h-56 w-72 shrink-0 rounded-lg object-cover sm:h-64 sm:w-80" />
+      <img src="assets/images/our-work/field-work-30.jpg" alt="Cool Air Enterprises field work - on-site installation" loading="lazy" width="320" height="240" class="h-56 w-72 shrink-0 rounded-lg object-cover sm:h-64 sm:w-80" />
+      <img src="assets/images/our-work/field-work-31.jpg" alt="Cool Air Enterprises field work - on-site installation" loading="lazy" width="320" height="240" class="h-56 w-72 shrink-0 rounded-lg object-cover sm:h-64 sm:w-80" />
+      <img src="assets/images/our-work/field-work-32.jpg" alt="Cool Air Enterprises field work - on-site installation" loading="lazy" width="320" height="240" class="h-56 w-72 shrink-0 rounded-lg object-cover sm:h-64 sm:w-80" />
+      <img src="assets/images/our-work/field-work-33.jpg" alt="Cool Air Enterprises field work - on-site installation" loading="lazy" width="320" height="240" class="h-56 w-72 shrink-0 rounded-lg object-cover sm:h-64 sm:w-80" />
+      <img src="assets/images/our-work/field-work-34.jpg" alt="Cool Air Enterprises field work - on-site installation" loading="lazy" width="320" height="240" class="h-56 w-72 shrink-0 rounded-lg object-cover sm:h-64 sm:w-80" />
+      <img src="assets/images/our-work/field-work-35.jpg" alt="Cool Air Enterprises field work - on-site installation" loading="lazy" width="320" height="240" class="h-56 w-72 shrink-0 rounded-lg object-cover sm:h-64 sm:w-80" />
+      <img src="assets/images/our-work/field-work-36.jpg" alt="Cool Air Enterprises field work - on-site installation" loading="lazy" width="320" height="240" class="h-56 w-72 shrink-0 rounded-lg object-cover sm:h-64 sm:w-80" />
+      <img src="assets/images/our-work/field-work-37.jpg" alt="Cool Air Enterprises field work - on-site installation" loading="lazy" width="320" height="240" class="h-56 w-72 shrink-0 rounded-lg object-cover sm:h-64 sm:w-80" />
+      <img src="assets/images/our-work/field-work-38.jpg" alt="Cool Air Enterprises field work - on-site installation" loading="lazy" width="320" height="240" class="h-56 w-72 shrink-0 rounded-lg object-cover sm:h-64 sm:w-80" />
+      <img src="assets/images/our-work/field-work-39.jpg" alt="Cool Air Enterprises field work - on-site installation" loading="lazy" width="320" height="240" class="h-56 w-72 shrink-0 rounded-lg object-cover sm:h-64 sm:w-80" />
+      <img src="assets/images/our-work/field-work-40.jpg" alt="Cool Air Enterprises field work - on-site installation" loading="lazy" width="320" height="240" class="h-56 w-72 shrink-0 rounded-lg object-cover sm:h-64 sm:w-80" />
+      <img src="assets/images/our-work/field-work-41.jpg" alt="Cool Air Enterprises field work - on-site installation" loading="lazy" width="320" height="240" class="h-56 w-72 shrink-0 rounded-lg object-cover sm:h-64 sm:w-80" />
+      <img src="assets/images/our-work/field-work-42.jpg" alt="Cool Air Enterprises field work - on-site installation" loading="lazy" width="320" height="240" class="h-56 w-72 shrink-0 rounded-lg object-cover sm:h-64 sm:w-80" />
+    </div>
+  </section>
+
+  <!-- ================= BRANDS WE WORK WITH ================= -->
+  <section class="border-y border-line bg-surface-alt py-16">
+    <div class="mx-auto max-w-content px-4 text-center sm:px-6 lg:px-8">
+      <h2 class="font-display text-sm font-semibold uppercase tracking-[0.25em] text-ink-muted">Brands We Work With</h2>
+
+      <!-- Real manufacturer logos, trimmed and resized by
+           scripts/optimize-images.js (processBrandLogos()) from the files in
+           assets/brand/. To swap or add a brand later: drop the new file
+           into assets/brand/, add it to BRAND_LOGO_MAP in that script, run
+           `npm run prepare-images`, then rebuild - no markup changes needed
+           beyond adding/removing one tile below. -->
+      <div class="mt-10 grid grid-cols-2 items-center gap-4 sm:grid-cols-4" data-reveal-group>
+        <div data-reveal class="card-lift flex items-center justify-center rounded-lg border border-line bg-white p-4">
+          <img src="assets/images/brands/carrier.svg" alt="Carrier" class="h-10 w-auto" width="300" height="121" loading="lazy" />
+        </div>
+        <div data-reveal class="card-lift flex items-center justify-center rounded-lg border border-line bg-white p-4">
+          <img src="assets/images/brands/daikin.png" alt="Daikin" class="h-10 w-auto" width="402" height="84" loading="lazy" />
+        </div>
+        <div data-reveal class="card-lift flex items-center justify-center rounded-lg border border-line bg-white p-4">
+          <img src="assets/images/brands/mitsubishi.png" alt="Mitsubishi" class="h-10 w-auto" width="197" height="200" loading="lazy" />
+        </div>
+        <div data-reveal class="card-lift flex items-center justify-center rounded-lg border border-line bg-white p-4">
+          <img src="assets/images/brands/toshiba.png" alt="Toshiba" class="h-10 w-auto" width="1308" height="200" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PAN-INDIA CAPABILITY (asymmetric editorial split) ================= -->
+  <section class="mx-auto max-w-content px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
+    <div class="grid grid-cols-1 gap-8 lg:grid-cols-[1.1fr_1fr] lg:gap-16">
+      <h2 class="font-display text-5xl font-bold leading-[0.95] text-ink sm:text-6xl lg:text-7xl" data-reveal>
+        Projects &amp;<br />Services<br /><span class="text-primary">Across India.</span>
+      </h2>
+      <div class="flex flex-col justify-center gap-5" data-reveal>
+        <p class="font-sans text-base leading-relaxed text-ink-muted">
+          Cool Air Enterprises is equipped to take on commercial and industrial HVAC
+          projects across India &mdash; from initial installation and erection through to
+          ongoing maintenance.
+        </p>
+        <p class="font-sans text-base leading-relaxed text-ink-muted">
+          Our team is based out of Delhi, with the capability to plan, execute and support
+          projects at client sites nationwide.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= STRONG ENQUIRY CTA ================= -->
+  <section class="line-pattern relative overflow-hidden bg-navy py-20 text-white lg:py-28">
+    <div class="relative mx-auto max-w-content px-4 text-center sm:px-6 lg:px-8">
+      <h2 class="font-display text-3xl font-bold sm:text-5xl">Have an HVAC requirement to discuss?</h2>
+      <p class="mx-auto mt-4 max-w-xl font-sans text-base text-white/75">
+        Tell us about your project and our team will get back to you with the right solution.
+      </p>
+      <div class="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
+        <a href="contact.html#contact-form" class="btn-primary">Enquire Now</a>
+        <a href="tel:+919717946234" class="btn-on-dark">Call +91 97179 46234</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!--
+  Shared site footer. Included once via the "@include: footer" marker near
+  the end of the body on every page.
+
+  No page-links column here on purpose: the header carries no visible menu
+  either (the site is a single "Enquire Now" landing model), so a footer
+  nav list would just repeat links nothing else on the site points to. The
+  services list stays because it names offerings, not pages, and the
+  contact column is intentionally just the two phone numbers - no email or
+  address - per the current content brief.
+
+  Numbers below are written as plain text (not pulled from config.js) on
+  purpose: this is the human-readable, always-crawlable version search
+  engines and no-JS visitors see. If a phone/WhatsApp number changes, update
+  it here AND in src/js/config.js (which drives the floating WhatsApp/Call
+  buttons and the contact form) - both places are short and easy to find.
+
+  Call and WhatsApp both use the same number (+91 97179 46234) on purpose -
+  the "Call:"/"WhatsApp:" prefixes below exist so the two lines read as two
+  different actions rather than an accidental duplicate.
+-->
+<footer class="bg-navy text-white">
+  <div class="mx-auto max-w-content px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
+    <div class="grid grid-cols-1 gap-12 lg:grid-cols-[1.3fr_1fr_1fr]">
+
+      <!-- Brand + short line -->
+      <div>
+        <a href="index.html" class="flex items-center gap-3" aria-label="Cool Air Enterprises - home">
+          <img src="assets/images/logo/cae-mark-white.png" alt="" class="h-9 w-auto" width="120" height="96" />
+          <span class="font-display text-lg font-bold uppercase tracking-wide">Cool Air Enterprises</span>
+        </a>
+        <p class="mt-4 max-w-xs text-sm leading-relaxed text-white/70">
+          Commercial and industrial HVAC installation, erection, maintenance and allied
+          works, serving projects across India.
+        </p>
+      </div>
+
+      <!-- Major service links -->
+      <div>
+        <h2 class="font-display text-sm font-semibold uppercase tracking-[0.15em] text-white/50">Services</h2>
+        <ul class="mt-4 space-y-3 text-sm text-white/80">
+          <li><a href="hvac-solutions.html" class="transition-colors hover:text-white">HVAC Installation &amp; AMC</a></li>
+          <li><a href="ventilation.html" class="transition-colors hover:text-white">Ventilation</a></li>
+          <li><a href="ducting.html" class="transition-colors hover:text-white">Ducting</a></li>
+          <li><a href="cold-storage.html" class="transition-colors hover:text-white">Cold Storage</a></li>
+          <li><a href="electrical.html" class="transition-colors hover:text-white">Electrical</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact number(s) only -->
+      <div>
+        <h2 class="font-display text-sm font-semibold uppercase tracking-[0.15em] text-white/50">Contact Number</h2>
+        <ul class="mt-4 space-y-3 text-sm text-white/80">
+          <li><span class="text-white/50">Call:</span> <a href="tel:+919717946234" class="transition-colors hover:text-white">+91 97179 46234</a></li>
+          <li><span class="text-white/50">WhatsApp:</span> <a href="https://wa.me/919717946234" class="transition-colors hover:text-white">+91 97179 46234</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="mt-12 flex flex-col gap-2 border-t border-white/10 pt-6 text-xs text-white/50 sm:flex-row sm:items-center sm:justify-between">
+      <p>&copy; <span data-current-year>2026</span> Cool Air Enterprises. All rights reserved.</p>
+      <p>Website Designed &amp; Developed by <a href="https://incrediblereach.com/" target="_blank" rel="noopener" class="underline underline-offset-2 transition-colors hover:text-white">Incredible Reach</a></p>
+    </div>
+  </div>
+</footer>
+
+<!--
+  Floating contact controls, included once via the "@include: contact-bar"
+  marker just before the closing body tag on every page.
+
+  - Desktop (sm and up): three small floating circular buttons, bottom-right
+    (WhatsApp, Call, LinkedIn).
+  - Mobile (below sm): a sticky bottom action bar instead, since a tiny
+    floating circle is a harder tap target on a phone. Only one of the two
+    is visible at a time (Tailwind's sm:hidden / hidden sm:flex).
+
+  Numbers/URLs here come from src/js/config.js at runtime is unnecessary for
+  something this static - they're written directly as real <a href> links
+  so they work even before/without JavaScript. Call and WhatsApp deliberately
+  use the same number (+91 97179 46234).
+-->
+
+<!-- Desktop floating buttons -->
+<div class="fixed bottom-6 right-6 z-40 hidden flex-col gap-3 sm:flex">
+  <a
+    href="https://wa.me/919717946234"
+    target="_blank"
+    rel="noopener"
+    aria-label="Chat with us on WhatsApp"
+    title="WhatsApp: +91 97179 46234"
+    class="group flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-card transition-transform hover:scale-105"
+  >
+    <svg class="h-7 w-7" viewBox="0 0 32 32" fill="currentColor" aria-hidden="true">
+      <path d="M16.001 3C9.376 3 4 8.373 4 15c0 2.34.653 4.524 1.786 6.393L4 29l7.79-1.755A11.94 11.94 0 0 0 16.001 27C22.626 27 28 21.627 28 15S22.626 3 16.001 3Zm0 21.818a9.77 9.77 0 0 1-4.98-1.363l-.357-.21-4.62 1.04 1.02-4.5-.232-.368A9.77 9.77 0 0 1 6.18 15c0-5.415 4.406-9.818 9.821-9.818 5.415 0 9.818 4.403 9.818 9.818 0 5.415-4.403 9.818-9.818 9.818Zm5.386-7.36c-.294-.147-1.741-.859-2.011-.957-.27-.098-.467-.147-.663.148-.196.294-.76.956-.932 1.152-.171.196-.343.22-.637.073-.294-.147-1.243-.458-2.368-1.462-.875-.78-1.466-1.744-1.638-2.038-.171-.294-.018-.453.129-.6.132-.132.294-.343.441-.514.147-.172.196-.294.294-.49.098-.196.049-.368-.024-.515-.073-.147-.663-1.598-.909-2.188-.24-.575-.483-.497-.663-.506l-.564-.01c-.196 0-.514.073-.784.368-.27.294-1.03 1.006-1.03 2.454 0 1.447 1.055 2.846 1.202 3.042.147.196 2.077 3.172 5.033 4.448.703.303 1.252.484 1.68.62.706.224 1.348.192 1.856.117.566-.085 1.741-.712 1.987-1.4.245-.688.245-1.278.171-1.4-.073-.123-.27-.196-.564-.343Z"/>
+    </svg>
+  </a>
+  <a
+    href="tel:+919717946234"
+    aria-label="Call Cool Air Enterprises"
+    title="Call: +91 97179 46234"
+    class="group flex h-14 w-14 items-center justify-center rounded-full bg-primary text-white shadow-card transition-transform hover:scale-105"
+  >
+    <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92Z"/>
+    </svg>
+  </a>
+  <a
+    href="https://www.linkedin.com/company/coool-air-enterprises/posts/?feedView=all"
+    target="_blank"
+    rel="noopener"
+    aria-label="View Cool Air Enterprises on LinkedIn"
+    title="LinkedIn: Cool Air Enterprises"
+    class="group flex h-14 w-14 items-center justify-center rounded-full bg-[#0A66C2] text-white shadow-card transition-transform hover:scale-105"
+  >
+    <svg class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.446-2.136 2.94v5.666H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.124 2.062 2.062 0 0 1 0 4.124zM7.114 20.452H3.556V9h3.558v11.452z"/>
+    </svg>
+  </a>
+</div>
+
+<!-- Mobile sticky bottom bar -->
+<div
+  class="fixed inset-x-0 bottom-0 z-40 grid grid-cols-3 border-t border-line bg-white shadow-[0_-4px_16px_rgba(11,26,51,0.12)] sm:hidden"
+  style="padding-bottom: env(safe-area-inset-bottom);"
+>
+  <a
+    href="https://wa.me/919717946234"
+    target="_blank"
+    rel="noopener"
+    class="flex items-center justify-center gap-1.5 border-r border-line py-3.5 font-sans text-xs font-semibold text-[#128C4A]"
+  >
+    <svg class="h-5 w-5" viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16.001 3C9.376 3 4 8.373 4 15c0 2.34.653 4.524 1.786 6.393L4 29l7.79-1.755A11.94 11.94 0 0 0 16.001 27C22.626 27 28 21.627 28 15S22.626 3 16.001 3Z"/></svg>
+    WhatsApp
+  </a>
+  <a
+    href="tel:+919717946234"
+    class="flex items-center justify-center gap-1.5 bg-primary py-3.5 font-sans text-xs font-semibold text-white"
+  >
+    <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92Z"/>
+    </svg>
+    Call Now
+  </a>
+  <a
+    href="https://www.linkedin.com/company/coool-air-enterprises/posts/?feedView=all"
+    target="_blank"
+    rel="noopener"
+    class="flex items-center justify-center gap-1.5 border-l border-line py-3.5 font-sans text-xs font-semibold text-[#0A66C2]"
+  >
+    <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.446-2.136 2.94v5.666H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.124 2.062 2.062 0 0 1 0 4.124zM7.114 20.452H3.556V9h3.558v11.452z"/>
+    </svg>
+    LinkedIn
+  </a>
+</div>
+
+
+<script src="assets/js/config.js"></script>
+<script src="assets/js/vendor/gsap.min.js"></script>
+<script src="assets/js/vendor/ScrollTrigger.min.js"></script>
+<script src="assets/js/animations.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

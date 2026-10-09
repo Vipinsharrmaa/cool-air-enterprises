@@ -1,0 +1,215 @@
+/*
+  Source stylesheet for Tailwind. This file is compiled by the Tailwind CLI
+  (see scripts/build.js) into dist/assets/css/main.css.
+
+  Almost everything on the site is plain Tailwind utility classes written
+  directly in the HTML. This file only holds the handful of things Tailwind
+  utilities can't express on their own: base element defaults, a couple of
+  small reusable component classes (so we're not repeating a 15-class string
+  on every button), and the prefers-reduced-motion safety net.
+*/
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ---------------------------------------------------------------------- */
+/* Base element defaults                                                   */
+/* ---------------------------------------------------------------------- */
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 88px; /* keeps anchored sections clear of the sticky header */
+  }
+
+  body {
+    @apply bg-surface text-ink font-sans antialiased;
+  }
+
+  /* The HTML "hidden" attribute must always mean hidden. Without this,
+     pairing hidden with a Tailwind display utility (flex/grid/block) on the
+     same element - e.g. the lightbox, which needs "flex" to center its
+     content once shown - lets that utility class win over the browser's
+     default [hidden]{display:none} rule (both are plain author-origin
+     rules of equal specificity, so the later one in the stylesheet wins).
+     The practical effect was a "hidden" full-screen lightbox overlay that
+     was actually still rendered and blocking clicks across the whole page.
+     This rule makes [hidden] non-negotiable everywhere on the site. */
+  [hidden] {
+    display: none !important;
+  }
+
+  /* Deliberately no color here. Headings inherit color from body (text-ink)
+     by default, but that means they correctly pick up "text-white" instead
+     whenever a parent section sets it (e.g. any bg-navy CTA/footer block) -
+     without needing a manual color override on every single heading.
+     Hard-coding a color here previously broke every heading that sat on a
+     dark section without its own explicit text-white class. */
+  h1, h2, h3, h4 {
+    @apply font-display font-semibold tracking-tight;
+  }
+
+  /* A visible, brand-colored focus ring for keyboard users on every
+     interactive element (buttons, links, form fields). */
+  a:focus-visible,
+  button:focus-visible,
+  input:focus-visible,
+  select:focus-visible,
+  textarea:focus-visible,
+  [tabindex]:focus-visible {
+    @apply outline outline-2 outline-offset-2 outline-primary;
+  }
+}
+
+/* ---------------------------------------------------------------------- */
+/* Small reusable components                                               */
+/* ---------------------------------------------------------------------- */
+
+@layer components {
+  /* Primary call-to-action button (solid brand blue). */
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-md bg-primary
+           px-6 py-3 font-sans text-sm font-semibold text-white shadow-card
+           transition-colors duration-200 hover:bg-primary-dark;
+  }
+
+  /* Secondary button (outline, used on dark or light backgrounds). */
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-md border
+           border-ink/20 bg-transparent px-6 py-3 font-sans text-sm font-semibold
+           text-ink transition-colors duration-200 hover:bg-ink/5;
+  }
+
+  /* Same outline button, tuned for use on the dark navy CTA sections. */
+  .btn-on-dark {
+    @apply inline-flex items-center justify-center gap-2 rounded-md border
+           border-white/30 bg-transparent px-6 py-3 font-sans text-sm font-semibold
+           text-white transition-colors duration-200 hover:bg-white/10;
+  }
+
+  /* Small uppercase "eyebrow" label used above section headings
+     (e.g. "01 / HVAC SOLUTIONS"). */
+  .eyebrow {
+    @apply font-sans text-xs font-semibold uppercase tracking-[0.2em] text-primary;
+  }
+
+  /* Standard section heading treatment. */
+  .section-title {
+    @apply font-display text-3xl font-bold leading-[1.05] text-ink sm:text-4xl md:text-5xl;
+  }
+
+  /* Arrow micro-interaction shared by all three buttons: an arrow glyph
+     slides in from the left and fades in on hover/focus, rather than being
+     static all the time - a small bit of feedback, not a static decoration. */
+  .btn-primary,
+  .btn-secondary,
+  .btn-on-dark {
+    position: relative;
+  }
+  .btn-primary::after,
+  .btn-secondary::after,
+  .btn-on-dark::after {
+    content: "\2192"; /* → */
+    display: inline-block;
+    transform: translateX(-6px);
+    opacity: 0;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+  }
+  .btn-primary:hover::after,
+  .btn-primary:focus-visible::after,
+  .btn-secondary:hover::after,
+  .btn-secondary:focus-visible::after,
+  .btn-on-dark:hover::after,
+  .btn-on-dark:focus-visible::after {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  /* Reusable hover-lift for cards: a small rise plus a stronger shadow,
+     used instead of (or alongside) a plain color-only hover state. */
+  .card-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .card-lift:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px -20px rgba(11, 26, 51, 0.35);
+  }
+
+  /* Slow "Ken Burns" drift applied to large hero photographs - subtle
+     enough to read as alive without being distracting, and automatically
+     frozen by the prefers-reduced-motion rule further down this file. */
+  .hero-zoom {
+    animation: hero-zoom 18s ease-out forwards;
+  }
+
+  /* Sticky header gains a soft shadow once the page has scrolled, so it
+     reads as "lifted" above the content instead of just a flat line. Toggled
+     by src/js/main.js (setupHeaderScrollShadow). */
+  header[data-scrolled="true"] {
+    box-shadow: 0 8px 24px -16px rgba(11, 26, 51, 0.25);
+  }
+
+  /* Home-page opening reveal overlay. Fades itself out with pure CSS after
+     ~1.5s so it never depends on JavaScript to release the page (see the
+     comment in src/partials/intro-animation.html for the full reasoning).
+     GSAP (src/js/animations.js) layers extra motion on top of this when it's
+     available, but this rule alone is enough to make the overlay safe. */
+  .intro-overlay {
+    @apply fixed inset-0 z-[200] flex items-center justify-center;
+    pointer-events: none;
+    animation: intro-fade 1.5s ease forwards;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .intro-overlay {
+      display: none;
+    }
+  }
+
+  /* The thin diagonal/line pattern used behind a few hero and CTA sections
+     to add an "engineering drawing" texture without a heavy image. */
+  .line-pattern {
+    background-image: repeating-linear-gradient(
+      115deg,
+      rgba(255, 255, 255, 0.06) 0px,
+      rgba(255, 255, 255, 0.06) 1px,
+      transparent 1px,
+      transparent 64px
+    );
+  }
+}
+
+/* ---------------------------------------------------------------------- */
+/* Motion safety net                                                        */
+/* ---------------------------------------------------------------------- */
+
+/*
+  GSAP timelines are written in src/js/animations.js and every one of them
+  checks this same media query before running (see the reduceMotion flag in
+  that file). This CSS rule is a second, independent safety net: even if a
+  future edit to the JS forgets to check, no element can end up permanently
+  hidden or transformed off-screen for a reduced-motion user.
+*/
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Keyframes for the intro overlay (kept outside @layer so they aren't
+   purged - Tailwind only scans for class names, not @keyframes usage). */
+@keyframes intro-fade {
+  0% { opacity: 1; visibility: visible; }
+  70% { opacity: 1; visibility: visible; }
+  100% { opacity: 0; visibility: hidden; }
+}
+
+/* Slow background drift for .hero-zoom (see @layer components above). */
+@keyframes hero-zoom {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.08); }
+}

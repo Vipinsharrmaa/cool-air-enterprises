@@ -1,0 +1,33 @@
+<!--
+  Home-page-only opening reveal. Included via the "@include: intro-animation"
+  marker right after the body opens, on index.html only.
+
+  How it stays safe (never blocks access to the site):
+  - Plain CSS animation (see .intro-overlay / @keyframes intro-fade in
+    input.css) fades this overlay out after ~1.5s on its own, with NO
+    dependency on JavaScript.
+  - pointer-events is "none" for its entire lifetime, so it never intercepts
+    clicks/taps/scroll even while visible.
+  - `prefers-reduced-motion` hides it immediately via a media query.
+  - If JavaScript loads, src/js/animations.js additionally animates the mark
+    and line for a more polished reveal - but that's a progressive
+    enhancement on top of the CSS behaviour above, not a requirement for it.
+  - It plays on every load/reload of the home page (per the site's design
+    brief), since it's short and non-blocking rather than a fake loading screen.
+-->
+<div class="intro-overlay bg-navy" aria-hidden="true" data-intro-overlay>
+  <div class="flex flex-col items-center gap-4">
+    <img
+      src="assets/images/logo/cae-mark-white.png"
+      alt=""
+      class="h-16 w-auto opacity-0 sm:h-20"
+      data-intro-mark
+      width="120" height="96"
+    />
+    <span
+      class="h-px w-0 bg-white/40"
+      data-intro-line
+      style="max-width: 220px;"
+    ></span>
+  </div>
+</div>
